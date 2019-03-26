@@ -1,4 +1,4 @@
-export interface Autonomos{
+export interface Autonomo {
     id: string;
     nome_propietario: string;
     telefone_comercial: string;
@@ -16,16 +16,13 @@ export interface Autonomos{
     email: string;
     image_paths: string;
 
-    avaliacoes: Avaliacoes[]; 
+    avaliacoes: Avaliacoes[];
 }
 
-export interface Avaliacoes{
+export interface Avaliacoes {
     id: string;
     nome: string;
     data: string;
     nota: string;
     comentario: string;
-
-
-
 }

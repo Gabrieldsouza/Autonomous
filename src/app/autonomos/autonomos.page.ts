@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {AutonomosService} from './autonomos.service';
+import {Autonomo} from './autonomos.model';
 
 @Component({
   selector: 'app-autonomos',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./autonomos.page.scss'],
 })
 export class AutonomosPage implements OnInit {
-
-  constructor() { }
+  autonomos: Autonomo[];
+  constructor(private autonomosService: AutonomosService) { }
 
   ngOnInit() {
+    this.autonomosService.autonomos().subscribe(dados => this.autonomos = dados);
   }
 
 }

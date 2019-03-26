@@ -15,11 +15,11 @@
 <ion-content>
   
   <ion-list>
-    <ion-item>
+    <ion-item *ngFor="let autonomo of autonomos">
       <ion-avatar slot="start">
         <img src="assets/icone01.png">
       </ion-avatar>
-      <a href="/auto01" color="primary">Autonomo1</a>
+      <a href="/auto01" color="primary">{{autonomo.nome_propietario}}</a>
       </ion-item>
     
     <ion-item>
