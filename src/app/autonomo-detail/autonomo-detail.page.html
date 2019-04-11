@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Autonomo 05
+      {{autonomo?.nome_propietario}}
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -24,13 +24,10 @@
     
       </ion-slides>
     
-    
-      <p>Este aqui é o Autonomo de número 05</p>
-      <p>O telefone do Autonomo 05 é </p>
-      <p>O endereço do Autonomo 05 é </p>
-      <p>O CEP do Autonomo 05 é </p>
-      <p>Cidade do Autonomo 05 é </p>
-      <p>Email do Autonomo 05 é</p>
-      <p>Facebook do Autonomo 05 é</p>
-    
+      <p>Este aqui é o Autonomo {{autonomo?.nome_propietario}}</p>
+      <p>O telefone do Autonomo {{autonomo?.telefone_comercial}} </p>
+      <p>O endereço do Autonomo {{autonomo?.endereco}}, {{autonomo?.numero}}, {{autonomo?.cidade}} </p>
+      <p>O CEP do Autonomo {{autonomo?.cep}} </p>
+      <p>Email do Autonomo {{autonomo?.email}}</p>
+
     </ion-content>

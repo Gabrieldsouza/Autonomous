@@ -16,38 +16,7 @@
   
   <ion-list>
     <ion-item *ngFor="let autonomo of autonomos">
-      <ion-avatar slot="start">
-        <img src="assets/icone01.png">
-      </ion-avatar>
-      <a href="/auto01" color="primary">{{autonomo.nome_propietario}}</a>
-      </ion-item>
-    
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="assets/icone02.png">
-      </ion-avatar>
-      <a href="/auto02" color="primary">Autonomo2</a>
-      </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="assets/icone03.png">
-      </ion-avatar>
-        <a href="/auto03" color="primary">Autonomo3</a>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar slot="start">
-        <img src="assets/icone04.png">
-      </ion-avatar>
-      <a href="/auto04" color="primary">Autonomo4</a>
-    </ion-item>
-    <ion-item>
-
-      <ion-avatar slot="start">
-        <img src="assets/icone05.png">
-      </ion-avatar>
-      <a href="/auto05" color="primary">Autonomo5</a>
+      <app-autonomo [autonomo]="autonomo"></app-autonomo>
     </ion-item>
   </ion-list>
 

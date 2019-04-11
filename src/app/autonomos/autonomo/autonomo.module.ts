@@ -5,13 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AutonomosPage } from './autonomos.page';
-import {AutonomoPageModule} from './autonomo/autonomo.module';
+import { AutonomoPage } from './autonomo.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: AutonomosPage
+    component: AutonomoPage
   }
 ];
 
@@ -20,9 +19,11 @@ const routes: Routes = [
         CommonModule,
         FormsModule,
         IonicModule,
-        RouterModule.forChild(routes),
-        AutonomoPageModule,
+        RouterModule.forChild(routes)
     ],
-  declarations: [AutonomosPage]
+    exports: [
+        AutonomoPage
+    ],
+    declarations: [AutonomoPage]
 })
-export class AutonomosPageModule {}
+export class AutonomoPageModule {}
