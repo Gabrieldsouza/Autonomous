@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AutonomosService} from './autonomos.service';
-import {Autonomo} from './autonomos.model';
+import {Autonomo} from './autonomo/autonomo.model';
 
 @Component({
   selector: 'app-autonomos',

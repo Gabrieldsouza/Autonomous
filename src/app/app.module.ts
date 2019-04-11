@@ -10,6 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {AutonomosService} from './autonomos/autonomos.service';
 import {HttpClientModule} from '@angular/common/http';
+import {AutonomoDetailPageModule} from './autonomo-detail/autonomo-detail.module';
+import {AutonomosPageModule} from './autonomos/autonomos.module';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import {HttpClientModule} from '@angular/common/http';
       BrowserModule,
       HttpClientModule,
       IonicModule.forRoot(),
-      AppRoutingModule],
+      AppRoutingModule,
+      AutonomoDetailPageModule,
+      AutonomosPageModule],
   providers: [
     StatusBar,
     SplashScreen,

@@ -3,7 +3,7 @@ import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 
 import {AUTONOMOS_API} from '../app.api';
-import {Autonomo} from './autonomos.model';
+import {Autonomo} from './autonomo/autonomo.model';
 
 @Injectable()
 export class AutonomosService {

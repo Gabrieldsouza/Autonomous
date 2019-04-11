@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
+import {AutonomosPage} from '../autonomos/autonomos.page';
+import {AutonomoDetailPage} from '../autonomo-detail/autonomo-detail.page';
 
 const routes: Routes = [
   {
@@ -21,7 +23,16 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            loadChildren: '../autonomos/autonomos.module#AutonomosPageModule'
+            component: AutonomosPage,
+          }
+        ]
+      },
+      {
+        path: 'autonomos/:id',
+        children: [
+          {
+            path: '',
+            component: AutonomoDetailPage,
           }
         ]
       },
@@ -31,51 +42,6 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: '../info/info.module#InfoPageModule'
-          }
-        ]
-      },
-      {
-        path: 'auto01',
-        children: [
-          {
-            path: '',
-            loadChildren: '../auto01/auto01.module#Auto01PageModule'
-          }
-        ]
-      },
-      {
-        path: 'auto02',
-        children: [
-          {
-            path: '',
-            loadChildren: '../auto02/auto02.module#Auto02PageModule'
-          }
-        ]
-      },
-      {
-        path: 'auto03',
-        children: [
-          {
-            path: '',
-            loadChildren: '../auto03/auto03.module#Auto03PageModule'
-          }
-        ]
-      },
-      {
-        path: 'auto04',
-        children: [
-          {
-            path: '',
-            loadChildren: '../auto04/auto04.module#Auto04PageModule'
-          }
-        ]
-      },
-      {
-        path: 'auto05',
-        children: [
-          {
-            path: '',
-            loadChildren: '../auto05/auto05.module#Auto05PageModule'
           }
         ]
       },
